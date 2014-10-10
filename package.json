@@ -1,9 +1,16 @@
 {
-    "name": "jwplatform-api",
-    "version": "0.0.1",
-    "dependencies": {
-        "request": "2.45.0",
-        "extend": "2.0.0",
-        "nonce": "1.0.3"
-    }
+	"name": "jwplatform-api",
+	"version": "0.1.0",
+	"description": "Simple wrapper around the jwPlatform API",
+	"keywords": [ "jwplatform", "api", "video", "audio" ],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tmont/jwplatform-api.git"
+	},
+	"author": "Tommy Montgomery <tmont@tmont.com> (http://tmont.com/)",
+	"dependencies": {
+		"request": "2.45.0",
+		"extend": "2.0.0",
+		"nonce": "1.0.3"
+	}
 }
