@@ -156,7 +156,10 @@ JwPlatformApi.prototype = {
 					protocol: link.protocol,
 					hostname: link.address,
 					pathname: 'progress',
-					query: {token: link.query.token}
+					query: {
+						token: link.query.token ,
+						key: link.query.key
+					}
 				})
 			};
 
