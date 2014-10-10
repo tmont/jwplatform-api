@@ -1,0 +1,9 @@
+{
+    "name": "jwplatform-api",
+    "version": "0.0.1",
+    "dependencies": {
+        "request": "2.45.0",
+        "extend": "2.0.0",
+        "nonce": "1.0.3"
+    }
+}
