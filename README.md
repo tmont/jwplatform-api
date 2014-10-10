@@ -1,6 +1,6 @@
 # jsPlatform API
 
-This is a simple wrapper around the [jsPlatform API](http://apidocs.jwplayer.com/)
+This is a simple wrapper for NodeJS around the [jsPlatform API](http://apidocs.jwplayer.com/)
 to make api calls easier.
 
 ## Installation
