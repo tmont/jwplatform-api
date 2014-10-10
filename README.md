@@ -92,13 +92,13 @@ var template = {
     format_key: 'ogg',
     default: 'none'
 };
-j.createTemplate('v1', template, function(err, result) { });
+api.createTemplate('v1', template, function(err, result) { });
 
 var fields = {
     template_key: '...',
     name: 'the new name'
 };
-j.updateTemplate('v1', fields, function(err, result) { });
+api.updateTemplate('v1', fields, function(err, result) { });
 
 api.getTemplates('v1', function(err, result) { });
 ```
