@@ -13,11 +13,21 @@ Creating a new jwPlatform API object:
 ```javascript
 var jwPlatform = require('jwplatform-api');
 
-//initialize it with your key and secret
+//initialize with your key and secret
 var api = new jwPlatform({
     key: '...',
     secret: '...'
 });
+
+//initialize with custom logger
+var logger = {
+    debug: function() {},
+    error: function() {}
+};
+var api = new jwPlatform({ ... }, logger);
+
+//initialize with no logging
+var api = new jwPlatform({ ... }, function() {});
 ```
 
 Make arbitrary queries:
