@@ -180,30 +180,30 @@ JwPlatformApi.prototype = {
 
 			var conversions = body.conversions;
 
-            var result = {
-                completed: conversions.reduce(function (cur, next) {
-                    return cur + (next.status === 'Ready');
-                }, 0),
-                total: body.total,
-                videos: conversions.map(function (conversion) {
-                    return {
-                        status: conversion.status.toLowerCase(),
-                        key: conversion.key,
-                        width: conversion.width,
-                        height: conversion.height,
-                        size: Number(conversion.filesize),
-                        duration: Number(conversion.duration),
-                        url: conversion.link && url.format({
-                            protocol: conversion.link.protocol,
-                            hostname: conversion.link.address,
-                            pathname: conversion.link.path
-                        })
-                    };
-                })
-            };
+			var result = {
+				completed: conversions.reduce(function (cur, next) {
+					return cur + (next.status === 'Ready');
+				}, 0),
+				total: body.total,
+				videos: conversions.map(function (conversion) {
+					return {
+						status: conversion.status.toLowerCase(),
+						key: conversion.key,
+						width: conversion.width,
+						height: conversion.height,
+						size: Number(conversion.filesize),
+						duration: Number(conversion.duration),
+						url: conversion.link && url.format({
+							protocol: conversion.link.protocol,
+							hostname: conversion.link.address,
+							pathname: conversion.link.path
+						})
+					};
+				})
+			};
 
-            //the original video shows up initially before the others have been queued
-            result.ready = body.total > 1 && result.completed === body.total;
+			//the original video shows up initially before the others have been queued
+			result.ready = body.total > 1 && result.completed === body.total;
 			callback(null, result);
 		});
 	}
